@@ -1,63 +1,135 @@
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Photo App</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Monospace&display=swap" rel="stylesheet">
 
-<style>
-    .red-text {
-    color: red;
-    }
-    
-    
-    h2 {
-    font-family: Lobster, Monospace;
-    }
-    
-    
-    p {
-    font-size: 16px;
-    font-family: Monospace;
-    }
-    
-    
-    .thick-green-border {
-    border-color: green;
-    border-width: 10px;
-    border-style: solid;
-    border-radius: 50%;
-    }
-    
-    
-    .smaller-image {
-    width: 100px;
-    }
-    
- </style>   
-<h2 class="red-text">CatPhotoApp</h2>
-<p>Click here for <a href="#">cat photos</a>.</p>
-<a href="#"><img class="smaller-image thick-green-border" src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
-<p>Things cats love:</p>
-<ul>
-<li>cat nip</li>
-<li>laser pointers</li>
-<li>lasagna</li>
-</ul>
-<p>Top 3 things cats hate:</p>
-<ol>
-<li>flea treatment</li>
-<li>thunder</li>
-<li>other cats</li>
-</ol>
+    <!-- Internal Styles -->
+    <style>
+        /* General styles */
+        body {
+            font-family: Monospace, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
+        h2 {
+            font-family: 'Lobster', Monospace, sans-serif;
+            color: red;
+            font-size: 2em;
+            margin-top: 20px;
+            text-align: center;
+        }
 
-<form action="https://freecatphotoapp.com/submit-cat-photo">
-<label><input type="radio" name="indoor-outdoor"> Indoor</label>
-<label><input type="radio" name="indoor-outdoor"> Outdoor</label>
-<label><input type="checkbox" name="personality"> Loving</label>
-<label><input type="checkbox" name="personality"> Lazy</label>
-<label><input type="checkbox" name="personality"> Crazy</label>
-<input type="text" placeholder="cat photo URL" required>
-<button type="submit">Submit</button>
-</form>
+        p {
+            font-size: 16px;
+            color: #333;
+            text-align: center;
+            padding: 0 10px;
+        }
 
+        /* Image Styling */
+        .smaller-image {
+            width: 100px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 50%;
+        }
 
+        .thick-green-border {
+            border: 10px solid green;
+        }
 
+        /* List Styling */
+        ul, ol {
+            text-align: left;
+            padding-left: 40px;
+        }
 
+        /* Form Styles */
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
 
+        label {
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            font-size: 14px;
+            margin-top: 10px;
+            width: 200px;
+            text-align: center;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: darkgreen;
+        }
+
+        /* Radio & Checkbox Input Styles */
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>CatPhotoApp</h2>
+    <p>Click here for <a href="#">cat photos</a>.</p>
+    
+    <a href="#">
+        <img class="smaller-image thick-green-border" src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back.">
+    </a>
+
+    <p>Things cats love:</p>
+    <ul>
+        <li>cat nip</li>
+        <li>laser pointers</li>
+        <li>lasagna</li>
+    </ul>
+
+    <p>Top 3 things cats hate:</p>
+    <ol>
+        <li>flea treatment</li>
+        <li>thunder</li>
+        <li>other cats</li>
+    </ol>
+
+    <form action="https://freecatphotoapp.com/submit-cat-photo">
+        <label><input type="radio" name="indoor-outdoor"> Indoor</label>
+        <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
+        
+        <br>
+        
+        <label><input type="checkbox" name="personality"> Loving</label>
+        <label><input type="checkbox" name="personality"> Lazy</label>
+        <label><input type="checkbox" name="personality"> Crazy</label>
+        
+        <br>
+        
+        <input type="text" placeholder="cat photo URL" required>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
